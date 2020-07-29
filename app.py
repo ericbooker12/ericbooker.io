@@ -1,8 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
-import io
-import random
-from flask import Flask, Response, request
-import numpy as np
+from flask import Flask, render_template, Response, request
+
 
 app = Flask(__name__)
 
