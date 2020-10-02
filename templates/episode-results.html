@@ -1,0 +1,19 @@
+{% extends 'episode-picker-base.html' %} {% set active_page = 'home' %} {% block content %}
+
+<div class="center">
+    <h1>{{show_title}}</h1>
+
+    {% if num_of_seasons > 1 %}
+        <p>{{num_of_seasons}} seasons</p>
+    {% else %}
+        <p>{{num_of_seasons}} season</p>
+    {% endif %}
+
+    <p>You should watch Season <strong>{{season_number}}</strong>, Episode <strong> {{episode_number}}</strong></p>
+    <h3><strong>"{{episode_title}}"</strong></h3>
+
+    <p><a href="{{ url_for('episode_picker_deluxe') }}">Choose another show</a></p>
+
+</div>
+
+{% endblock %}
