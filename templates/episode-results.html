@@ -1,8 +1,7 @@
 {% extends 'episode-picker-base.html' %} {% set active_page = 'home' %} {% block content %}
 
 <div class="center">
-    <h1>{{show_title}}</h1>
-
+    <span class = "title">{{show_title}}</span>   <span class = "title2">({{year_released}})</span>  
     {% if num_of_seasons > 1 %}
         <p>{{num_of_seasons}} seasons</p>
     {% else %}

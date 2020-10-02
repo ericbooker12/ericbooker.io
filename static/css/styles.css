@@ -10,3 +10,34 @@
     padding: 10px;
     text-align: center;
 }
+
+.left {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    /* text-align: center; */
+}
+
+#project_header {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+    font-size: 150%;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+#episode_to_watch {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+}
+
+#title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#title2 {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+    font-size: 140%;
+}
