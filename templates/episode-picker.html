@@ -64,11 +64,19 @@
 
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/">Home</a>
+    </nav>
+
     <div class="center">
         <h1 class="title">What to Watch</h1>
         <button onclick="getEpisode()" class="btn">Go</button>
 
         <h2 id="episode_to_watch"></h2>
+
+        <p id="extra-message"></p>
+
     </div>
 
     <script>
@@ -76,9 +84,13 @@
             let season = Math.floor(Math.random() * 8) + 1
             let episode = Math.floor(Math.random() * 11) + 1
 
-            output = `Season: ${season} Episode: ${episode}`
+            let output = `Season: ${season} Episode: ${episode}`
+            let message = `<a href="{{ url_for('episode_picker_deluxe') }}">Try the deluxe version</a>`
+
 
             document.getElementById("episode_to_watch").innerHTML = output;
+            document.getElementById("extra-message").innerHTML = message;
+            
 
         }
     </script>

@@ -10,4 +10,6 @@ flask run --port 5002
 
 web: gunicorn -b :$PORT app:app
 
-git rm --cached
+git rm --cached 
+
+make sure pipfile.lock has been updated before dploying to Heroku if new modules have been added to the project.
