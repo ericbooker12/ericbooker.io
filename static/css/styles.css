@@ -30,14 +30,12 @@
     font-size: 80px;
 }
 
-#title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 150%;
-}
-
-#title2 {
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: bold; */
-    font-size: 140%;
+.project-list {
+    font-size: 30px;
+    margin-left: 0px;
+    margin-top: 20px margin-top: 300px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    /* text-align: center; */
 }
