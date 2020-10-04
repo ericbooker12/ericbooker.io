@@ -6,13 +6,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     margin-top: 250px;
-    width: 50%;
+    width: 80%;
     padding: 10px;
     text-align: center;
 }
 
 .btn {
-    background-color: grey/* Green */
+    background-color: lightgrey;
     border: none;
     color: black;
     padding: 15px 32px;
@@ -38,12 +38,13 @@ body {
     text-align: center;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     body {
-        /* background-color: lightblue; */
+        background: lightslategray;
     }
     .center {
-        font-size: 30px margin: auto;
+        font-size: 30px;
+        margin: auto;
         margin-top: 300px;
         width: 100%;
         padding: 10px;
@@ -55,8 +56,8 @@ body {
     .btn {
         border: none;
         background-color: lightgrey;
-        height: 150px;
-        width: 400px;
+        height: 200px;
+        width: 80%;
         color: black;
         padding: 15px 32px;
         text-align: center;
@@ -71,5 +72,7 @@ body {
     .placeholder-text {
         text-align: center;
         height: 200px;
+        width: 80%;
+        font-size: 100px;
     }
 }
