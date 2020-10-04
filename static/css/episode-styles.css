@@ -38,7 +38,7 @@ body {
     text-align: center;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-device-width: 415px) {
     body {
         background: lightslategray;
     }
