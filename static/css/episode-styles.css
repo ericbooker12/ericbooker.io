@@ -1,152 +1,165 @@
-/* Desktop */
-
-body {
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: arial, sans-serif;
-}
-
-.center {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-    margin-top: 250px;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-}
-
-.center_movie {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-    margin-top: 0px;
-    width: 60%;
-    padding: 10px;
-    text-align: center;
-}
-
-.btn {
-    border: none;
-    color: #5F6368;
-    padding: 15px 32px;
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    /*text-decoration: none;*/
-    /*display: inline-block;*/
-    font-size: 16px;
-    margin-top: 20px;
-    /* box-shadow: 2px 2px 1px #888888; */
-    border-radius: 4px;
-    background-color: #c9c9c9;
-}
-
-.btn:hover {
-    /* background-color: rgb(191, 191, 191); */
-    /* box-shadow: 1px 1px 1px #888888; */
-    background-color: lightgrey;
-    border: 1px solid #717171;
-    border-radius: 4px;
-    color: #5F6368;
-    width: 98px;
-    height: 48px;
-}
-
-.title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.movie_title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 60px;
-}
-
-.movie_year {
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: bold; */
-    font-size: 20px
-}
-
-.title2 {
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: bold; */
-    font-size: 125%;
-}
-
-.placeholder-text {
-    border: 1px solid #717171;
-    text-align: center;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 4px;
-}
-
-.movie_data {
-    width: 50%;
-}
-
-.movie_title {
-    margin: 25px;
-}
-
-.cast {}
-
-.category {
-    font-size: 125%;
-    font-weight: bold;
-}
-
-
-/* Mobile  */
-
-@media only screen and (max-device-width: 415px) {
+    /* Desktop */
+    
     body {
-        /* background: lightslategray; */
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: arial, sans-serif;
     }
+    
     .center {
-        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
         margin: auto;
-        margin-top: 300px;
+        margin-top: 250px;
         width: 100%;
         padding: 10px;
-        /* text-align: center; */
+        text-align: center;
     }
-    .title {
-        font-size: 90px;
+    
+    .center_movie {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: auto;
+        margin-top: 0px;
+        width: 60%;
+        padding: 10px;
+        text-align: center;
     }
+    
     .btn {
         border: none;
-        background-color: green;
-        /* lightgrey;*/
-        height: 150px;
-        width: 50%;
-        color: black;
+        color: #5F6368;
         padding: 15px 32px;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 70px;
-        margin-top: 100px;
+        width: 100px;
+        height: 50px;
+        /*text-decoration: none;*/
+        /*display: inline-block;*/
+        font-size: 16px;
+        margin-top: 20px;
+        /* box-shadow: 2px 2px 1px #888888; */
+        border-radius: 4px;
+        background-color: #c9c9c9;
     }
-    #episode_to_watch {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 80px;
+    
+    .btn:hover {
+        /* background-color: rgb(191, 191, 191); */
+        /* box-shadow: 1px 1px 1px #888888; */
+        background-color: lightgrey;
+        border: 1px solid #717171;
+        border-radius: 4px;
+        color: #5F6368;
+        width: 98px;
+        height: 48px;
     }
-    .placeholder-text {
-        text-align: center;
-        height: 150px;
-        width: 75%;
-        font-size: 75px;
-    }
+    
     .title {
-        font-size: 90px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 30px;
     }
-    .home-btn {
-        font-size: 40px;
-        margin-top: 10px;
+    
+    .movie_title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 60px;
     }
-    #mainNav {
-        margin: 20px;
+    
+    .movie_year {
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-weight: bold; */
+        font-size: 20px
     }
-}
+    
+    .title2 {
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-weight: bold; */
+        font-size: 125%;
+    }
+    
+    .placeholder-text {
+        border: 1px solid #717171;
+        text-align: center;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 4px;
+    }
+    
+    .movie_data {
+        width: 50%;
+    }
+    
+    .movie_title {
+        margin: 25px;
+    }
+    
+    .cast {}
+    
+    .category {
+        font-size: 125%;
+        font-weight: bold;
+    }
+    /* Mobile  */
+    
+    @media only screen and (max-device-width: 415px) {
+        body {
+            /* background: lightslategray; */
+        }
+        .center {
+            font-size: 30px;
+            margin: auto;
+            margin-top: 300px;
+            width: 100%;
+            padding: 10px;
+            /* text-align: center; */
+        }
+        .center_movie {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            margin-top: 0px;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        .title {
+            font-size: 90px;
+        }
+        .movie_title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 60px;
+        }
+        .btn {
+            border: none;
+            background-color: lightgrey;
+            height: 150px;
+            width: 50%;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 70px;
+            margin-top: 100px;
+        }
+        #episode_to_watch {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 80px;
+        }
+        .placeholder-text {
+            text-align: center;
+            height: 150px;
+            width: 75%;
+            font-size: 75px;
+        }
+        .title {
+            font-size: 90px;
+        }
+        .home-btn {
+            font-size: 40px;
+            margin-top: 10px;
+        }
+        #mainNav {
+            margin: 20px;
+        }
+        .movie_data {
+            font-size: 20px;
+        }
+    }
