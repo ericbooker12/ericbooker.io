@@ -1,5 +1,8 @@
+/* Desktop */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: arial, sans-serif;
 }
 
 .center {
@@ -11,21 +14,58 @@ body {
     text-align: center;
 }
 
+.center_movie {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    margin-top: 0px;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+
 .btn {
-    background-color: lightgrey;
     border: none;
-    color: black;
+    color: #5F6368;
     padding: 15px 32px;
     text-align: center;
+    width: 100px;
+    height: 50px;
     /*text-decoration: none;*/
     /*display: inline-block;*/
     font-size: 16px;
+    margin-top: 20px;
+    /* box-shadow: 2px 2px 1px #888888; */
+    border-radius: 4px;
+    background-color: #c9c9c9;
+}
+
+.btn:hover {
+    /* background-color: rgb(191, 191, 191); */
+    /* box-shadow: 1px 1px 1px #888888; */
+    background-color: lightgrey;
+    border: 1px solid #717171;
+    border-radius: 4px;
+    color: #5F6368;
+    width: 98px;
+    height: 48px;
 }
 
 .title {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 30px;
+}
+
+.movie_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.movie_year {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+    font-size: 20px
 }
 
 .title2 {
@@ -35,8 +75,30 @@ body {
 }
 
 .placeholder-text {
+    border: 1px solid #717171;
     text-align: center;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 4px;
 }
+
+.movie_data {
+    width: 50%;
+}
+
+.movie_title {
+    margin: 25px;
+}
+
+.cast {}
+
+.category {
+    font-size: 125%;
+    font-weight: bold;
+}
+
+
+/* Mobile  */
 
 @media only screen and (max-device-width: 415px) {
     body {
@@ -55,7 +117,8 @@ body {
     }
     .btn {
         border: none;
-        background-color: lightgrey;
+        background-color: green;
+        /* lightgrey;*/
         height: 150px;
         width: 50%;
         color: black;
@@ -64,7 +127,7 @@ body {
         text-decoration: none;
         display: inline-block;
         font-size: 70px;
-        margin-top: 125px;
+        margin-top: 100px;
     }
     #episode_to_watch {
         font-family: Arial, Helvetica, sans-serif;

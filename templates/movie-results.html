@@ -1,0 +1,40 @@
+{% extends 'episode-picker-base.html' %} {% set active_page = 'home' %} {% block content %}
+
+<div class="center_movie movie_data">
+
+    <div class = movie_title>
+        <span class = "movie_title">{{movie.title}}</span>
+    </div>
+
+    <div class="cast">
+        <span class="category">Cast: </span>
+       <div> {{', '.join(movie.cast[:5])}}</div>
+    </div>
+ 
+    <div class="director">
+        <span class="category">Directed by: </span>
+        {{movie.director[0]}}
+    </div>
+  
+    <div class="release_date">
+        <span class="category">Release Date: </span>
+        {{movie.release_date}}
+    </div>
+    <div class="plot">
+        <p class="plot_description">{{movie.plot}}<p>
+    </div>
+
+    <div class="image">
+    <img src={{movie.url}} alt={{movie.title}} style="width:300px;height:396px;">
+    </div>
+  
+
+
+
+
+
+    <p><a href="{{ url_for('episode_picker_deluxe') }}">Choose another movie or series</a></p>
+
+</div>
+
+{% endblock %}
