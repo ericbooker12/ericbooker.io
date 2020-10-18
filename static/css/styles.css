@@ -20,7 +20,7 @@
 #project_header {
     font-family: Arial, Helvetica, sans-serif;
     /* font-weight: bold; */
-    font-size: 150%;
+    font-size: 125%;
     margin-left: 40px;
     margin-top: 20px;
 }
@@ -38,4 +38,51 @@
     padding: 10px;
     font-size: 1.5em;
     /* text-align: center; */
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 6px;
+    /* grid-template-rows: 100px; */
+}
+
+.item {
+    border-radius: 3px;
+    margin-bottom: auto;
+    background-color: rgb(189, 193, 198);
+    height: 80px;
+    color: black;
+}
+
+.item:hover {
+    /* background-color: lightsteelblue; */
+    box-shadow: 1px 1px 2px 2px #737698;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.item-text {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.one {
+    grid-row: 1/2;
+}
+
+.two {
+    grid-row: 2/3;
+}
+
+.three {
+    grid-row: 3/4;
 }

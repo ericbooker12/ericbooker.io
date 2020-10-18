@@ -13,3 +13,11 @@ web: gunicorn -b :$PORT app:app
 git rm --cached 
 
 make sure pipfile.lock has been updated before dploying to Heroku if new modules have been added to the project.
+
+to create a virtual environment:
+    virtualenv -p python3 [name of virtual environment]
+
+to run a virtual environment:
+    . [name of environment]/bin/activate
+
+
