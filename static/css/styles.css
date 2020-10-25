@@ -42,7 +42,7 @@
 
 .project-list {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 75%;
     grid-gap: 6px;
     /* grid-template-rows: 100px; */
 }
@@ -85,4 +85,23 @@ a:hover {
 
 .three {
     grid-row: 3/4;
+}
+
+.four {
+    grid-row: 4/5;
+}
+
+.show-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 6px;
+}
+
+.cast_member {
+    border-radius: 3px;
+    margin-bottom: auto;
+    background-color: rgb(181, 188, 244);
+    border: rgb(18, 25, 34) 2px;
+    height: 30px;
+    color: black;
 }

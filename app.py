@@ -1,5 +1,5 @@
 from flask import Flask, render_template, Response, request, redirect, url_for
-from episode_data import get_series_data, get_movie_data
+from episode_data import get_series_data, get_movie_data, get_series_data_random
 import random
 
 
@@ -19,14 +19,46 @@ def episode_picker_deluxe():
 
     return render_template("episode-picker-deluxe.html")
 
+@app.route("/episode-details", methods=["GET", "POST"])
+def episode_details():
 
-@app.route("/get-show-data", methods=["GET", "POST"])
-def get_show_data():
+    return render_template("episode-details.html")
+
+@app.route("/get-episode-details", methods=["GET", "POST"])
+def get_episode_details():
 
     if request.method == 'POST':
         show = request.form['show']
 
         show_info = get_series_data(show)
+
+        if show_info == "movie":
+
+            movie_info = get_movie_data(show)
+
+            # print(movie_info)
+
+            return render_template("movie-results.html", movie = movie_info) 
+        
+        else:
+
+            
+            return render_template(
+                "get-episode-details.html",
+                show_info = show_info
+            )
+
+    else:
+        return redirect(url_for('episode_picker_deluxe'))
+
+
+@app.route("/get-random-show", methods=["GET", "POST"])
+def get_random_show():
+
+    if request.method == 'POST':
+        show = request.form['show']
+
+        show_info = get_series_data_random(show)
 
         if show_info == "movie":
 
@@ -38,12 +70,9 @@ def get_show_data():
         
         else:
 
-            print("*************************")
-            print(show_info)
-            print("*************************")
-            
-        
             num_of_seasons = len(show_info)
+
+            # print(show_info)
             
             rand_season = random.randint(1, num_of_seasons)
 
@@ -58,7 +87,7 @@ def get_show_data():
             episode_to_watch = episode_list[random_episode - 1]
             
             return render_template(
-                "episode-results.html", 
+                "random-episode-results.html", 
                 show_title = show_title, 
                 show_info = show_info, 
                 year_released = year, 
@@ -70,6 +99,10 @@ def get_show_data():
 
     else:
         return redirect(url_for('episode_picker_deluxe'))
+
+@app.route("/devices")
+def devices():
+    return render_template("devices.html")
 
 
 if __name__ == '__main__':

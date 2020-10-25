@@ -1,0 +1,113 @@
+/*.red-button {
+	background-color: #EE9191;
+}*/
+
+.round {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.off-button {
+    width: 60px;
+    /*border-radius: 50%;*/
+}
+
+.red-led>.off {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.red-led>.on {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.green-led>.off {
+    background-color: rgba(0, 255, 0, 0.5);
+    ;
+}
+
+.green-led>.on {
+    background-color: green;
+}
+
+.yellow-led>.off {
+    background-color: rgba(255, 165, 0, 0.5);
+}
+
+.yellow-led>.on {
+    background-color: orange;
+}
+
+.blue-led>.off {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.blue-led>.on {
+    background-color: blue;
+}
+
+.white-led>.off {
+    background-color: rgb(240, 240, 240);
+    /*border: 1px solid grey;*/
+}
+
+.white-led>.on {
+    background-color: grey;
+    /*border: 1px solid grey;*/
+}
+
+.fan>.off {
+    background-color: rgb(240, 240, 240);
+    /*border: 1px solid grey;*/
+}
+
+.fan>.on {
+    background-color: grey;
+    /*border: 1px solid grey;*/
+}
+
+.blinkButton {
+    background-color: red;
+    /*border: 1px solid grey;*/
+}
+
+.blink-led>.on {
+    background-color: orange;
+    /*border: 1px solid grey;*/
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    /*background-color: #2196F3;*/
+    padding: 10px;
+}
+
+.grid-item {
+    /*background-color: rgba(230, 230, 230, 0.8);*/
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    /*padding: 20px;*/
+    /*font-size: 30px;*/
+    margin-left: auto;
+    margin-right: auto;
+    /*text-align: center;*/
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.all {
+    background-color: black;
+}
+
+.words {
+    background-color: grey;
+}
+
+.icon_label {
+    margin: auto;
+    width: 60%;
+    padding-right: 60px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}

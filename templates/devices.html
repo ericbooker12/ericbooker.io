@@ -1,0 +1,195 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="raphael.2.1.0.min.js"></script>
+    <script src="justgage.1.0.1.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/device-styles.css') }}">
+
+    <script>
+        let accessToken = "5c9e98f90043aa508f8fae6d4b45bd06707abb6a";
+        let deviceID = "280031000147373336323230";
+
+
+
+
+        function toggleLED(color) {
+            let element = document.getElementById(color);
+            let all = document.getElementById("all");
+
+            if (element.classList.contains('off')) {
+                element.classList.add('on');
+                element.classList.remove('off');
+
+                $.post(getURL(color), {
+                    params: "on",
+                    access_token: accessToken
+                });
+
+            } else if (element.classList.contains("on")) {
+                element.classList.remove('on');
+                element.classList.add('off');
+                all.classList.remove('on');
+                all.classList.add('off');
+
+                $.post(getURL(color), {
+                    params: "off",
+                    access_token: accessToken
+                });
+            }
+        }
+
+        function turnOnAll() {
+
+            let red = document.getElementById("red");
+            let green = document.getElementById("green");
+            let blue = document.getElementById("blue");
+            let all = document.getElementById("all");
+
+            console.log(all);
+
+            if (all.classList.contains('off')) {
+                all.classList.add('on');
+                red.classList.add('on');
+                green.classList.add('on');
+                blue.classList.add('on');
+
+                all.classList.remove('off');
+                red.classList.remove('off');
+                green.classList.remove('off');
+                blue.classList.remove('off');
+                $.post(getAllURL(), {
+                    params: "on",
+                    access_token: accessToken
+                });
+            } else if (all.classList.contains('on')) {
+                all.classList.add('off');
+                red.classList.add('off');
+                green.classList.add('off');
+                blue.classList.add('off');
+
+                all.classList.remove('on');
+                red.classList.remove('on');
+                green.classList.remove('on');
+                blue.classList.remove('on');
+                $.post(getAllURL(), {
+                    params: "off",
+                    access_token: accessToken
+                });
+            }
+
+        }
+
+        function blinkAll() {
+            let blink = document.getElementById("blink");
+            $.post(getBlinkURL(), {
+                params: "off",
+                access_token: accessToken
+            });
+        }
+
+
+        function getURL(color) {
+            return "https://api.spark.io/v1/devices/" + deviceID + "/" + color;
+        }
+
+        function getBlinkURL(color) {
+            return "https://api.spark.io/v1/devices/" + deviceID + "/blink";
+        }
+
+        document.addEventListener('keydown', logKey);
+
+        function logKey(e) {
+            console.log(e.key);
+            if (e.key == 'r' || e.key == 'R' || e.key == '1') {
+                toggleLED('red')
+            } else if (e.key == 'b' || e.key == 'B' || e.key == '2') {
+                toggleLED('blue')
+            } else if (e.key == 'g' || e.key == 'G' || e.key == '3') {
+                toggleLED('green')
+            } else if (e.key == 'y' || e.key == 'Y' || e.key == '4') {
+                toggleLED('yellow')
+            } else if (e.key == 'w' || e.key == 'W' || e.key == '5') {
+                toggleLED('white')
+            }
+        }
+
+        function getAllURL() {
+            return "https://api.spark.io/v1/devices/" + deviceID + "/all";
+        }
+
+
+        function words() {
+            console.log("Words");
+            $.post(wordsURL(), {
+                params: "Eric Booker",
+                access_token: accessToken
+            });
+        }
+
+        function wordsURL() {
+            return "https://api.spark.io/v1/devices/" + deviceID + "/words";
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <div class='red-led grid-item'>
+            <div class="round red off" id='red' onClick="toggleLED('red')">
+                <div class='icon_label'>R</div>
+            </div>
+        </div>
+
+        <div class='blue-led grid-item'>
+            <div class="round blue off" id='blue' onClick="toggleLED('blue')">
+                <div class='icon_label'>B</div>
+            </div>
+            <!-- <input type="button" onClick="switchOff('blue')" value="OFF" class='blue-button off-button'/> -->
+        </div>
+
+        <div class='green-led grid-item'>
+            <div class="round green off" id='green' onClick="toggleLED('green')">
+                <div class='icon_label'>G</div>
+            </div>
+            <!-- <input type="button" onClick="switchOff('green')" value="OFF" class='green-button off-button'/> -->
+        </div>
+
+        <div class='yellow-led grid-item'>
+            <div class="round yellow off" id='yellow' onClick="toggleLED('yellow')">
+                <div class='icon_label'>O</div>
+            </div>
+            <!-- <input type="button" onClick="switchOff('yellow')" value="OFF" class='yellow-button off-button'/> -->
+        </div>
+
+        <div class='white-led grid-item'>
+            <div class="round white off" id='white' onClick="toggleLED('white')">
+                <div class='icon_label'>F</div>
+            </div>
+            <!-- <input type="button" onClick="switchOff('white')" value="OFF" class='white-button off-button'/> -->
+        </div>
+
+        <div class='all-led grid-item'>
+            <div class="round all off" id='all' onClick="turnOnAll()">
+                <div class='icon_label'>All</div>
+            </div>
+        </div>
+
+        <div class='blink-led grid-item'>
+            <div class="round blinkButton off" id='blink' onClick="blinkAll()"></div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

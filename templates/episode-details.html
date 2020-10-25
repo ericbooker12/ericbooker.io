@@ -1,17 +1,13 @@
 {% extends 'episode-picker-base.html' %} {% set active_page = 'home' %} {% block content %}
 
-
 <div class="center">
-    <h1 class="title">What to Watch</h1>
-    <!-- <button onclick="getEpisode()" class="btn">Go</button> -->
+    <h1>Get Episode Details</h1>
 
-    <form class="form" role="form" action="/get-random-show" method="post">
+    <form class="form" role="form" action="/get-episode-details" method="post">
         <input name="show" type="text" class="form-control placeholder-text" id="show" placeholder="Enter a series" required>
         <p><button id="submit" type="submit" class="btn btn-success mt-3">Go</button></p>
     </form>
 
-    <h2 id="episode_to_watch"></h2>
 </div>
-
 
 {% endblock %}

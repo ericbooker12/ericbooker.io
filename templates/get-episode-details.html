@@ -1,0 +1,18 @@
+{% extends 'episode-picker-base.html' %} {% set active_page = 'home' %} {% block content %}
+
+<div class="center">
+
+
+    <h1>{{show_info.title}}</h1>
+    <p>{{show_info.plot}}</p>
+
+    <div class="show-wrapper">
+        {% for cast_member in show_info.cast %}
+        <div class="cast_member">{{ cast_member }}</div>
+        {% endfor %}
+    </div>
+
+
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> {% endblock %}
